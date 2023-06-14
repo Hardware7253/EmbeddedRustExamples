@@ -12,8 +12,8 @@ The default clock configuration in each example project uses a 16Mhz external cl
 4. `rustup component add llvm-tools-preview` Binutils alternative for all supported rust architectures
 5. `cargo install cargo-flash` Install cargo-flash for flashing the microcontroller, ensure libusb is installed first
 6. `cargo install cargo-embed` Install cargo-embed for easy compiling, uploading, and rtt debugging
+7. Setup udev rules so you have access to the probe [Instructions](https://probe.rs/docs/getting-started/probe-setup/)
 
 ## Usage Instructions
 All the configuration has allready been done inside of each projects `Cargo.toml`, `Embed.toml`, `memory.x` and `.cargo/config` files for the STM32F103C8T6.
 The project can be flashed to a swd probe using `cargo flash --chip stm32f103c8t6 --release`, or can be flashed and debugged using `cargo embed --release`
-
