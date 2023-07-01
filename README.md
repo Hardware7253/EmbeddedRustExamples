@@ -6,7 +6,7 @@ The default clock configuration may need to be changed depending on your STM32F1
 The default clock configuration in each example project uses a 16Mhz external clock, with a 48Mhz core clock.
 
 ## Install Instructions
-1. Ensure rustup is installed on your system
+1. Ensure rust and rustup are installed on your system
 2. `rustup target add thumbv7m-none-eabi` Add Cortex-M3 target platform
 3. `cargo install cargo-binutils` Dependency for next step, ensure build-essential is installed on your system first
 4. `rustup component add llvm-tools-preview` Binutils alternative for all supported rust architectures
