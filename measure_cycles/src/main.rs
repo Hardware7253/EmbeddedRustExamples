@@ -61,7 +61,7 @@ fn main() -> ! {
         // Because the DWT cycle_count is a u32 it resets frequently due to the high 48Mhz clockspeed
         // Keeping track of the cycle resets can be used to store the cycles as a u64
         // The u64 value will take thousands of years to reset
-        let cycles: u64 = (cycle_resets * u32::MAX) as u64 + current_cycles as u64;
+        let cycles: u64 = (cycle_resets as u64 * u32::MAX as u64) + current_cycles as u64;
 
         rprintln!("{}", cycles);
         delay.delay_ms(1000u16);
